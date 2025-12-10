@@ -1,0 +1,13 @@
+# Ambiente Virtual
+.venv/
+__pycache__/
+
+# Dados (Nunca suba dados brutos ou processados)
+data/
+output/
+*.json
+*.parquet
+
+# Logs do Spark
+derby.log
+metastore_db/
