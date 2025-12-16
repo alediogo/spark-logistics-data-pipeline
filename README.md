@@ -1,3 +1,10 @@
+<div align="center">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+  <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=Apache%20Spark&logoColor=white" alt="Apache Spark">
+  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/apache%20parquet-%2366c2a5.svg?style=for-the-badge&logo=apacheparquet&logoColor=white" alt="Parquet">
+</div>
+
 # 🚚 Spark Logistics Data Pipeline
 
 Pipeline de Engenharia de Dados desenvolvido para processar grandes volumes de dados logísticos brutos.
