@@ -23,7 +23,7 @@ jobs:
 
     - name: Rodar Linter (Flake8)
       run: |
-        # Para o build se houver erros de sintaxe Python ou símbolos indefinidos
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # Avisa sobre problemas de estilo (PEP8) sem parar o build
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # Para o build se houver erros de sintaxe, mas IGNORA pastas de bibliotecas
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=venv,env,.venv,Lib,site-packages,source/Lib
+        # Avisa sobre estilo, também ignorando as bibliotecas
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=venv,env,.venv,Lib,site-packages,source/Lib
