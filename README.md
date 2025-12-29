@@ -116,3 +116,15 @@ O arquivo Parquet final terá a seguinte estrutura tabular (exemplo):
 | `delivery_lat` | Double | Latitude do ponto de entrega |
 | `delivery_lng` | Double | Longitude do ponto de entrega |
 
+---
+## ☁️ Arquitetura em Nuvem (Simulação AWS)
+Embora este projeto tenha sido executado localmente (On-Premise) para fins de portfólio, ele foi desenhado para ser escalável na nuvem **AWS (Amazon Web Services)**.
+
+Em um ambiente de produção real, a arquitetura seguiria este fluxo:
+
+1.  **Ingestão:** Os arquivos brutos (JSON) seriam depositados em um Bucket **Amazon S3** (Zona Bronze/Raw).
+2.  **Processamento (ETL):** O script PySpark seria submetido via **Amazon EMR (Elastic MapReduce)** ou **AWS Glue** para processamento distribuído em cluster.
+3.  **Armazenamento:** Os dados tratados (formato Parquet) seriam gravados de volta no S3 (Zona Prata/Curated) particionados por data/região.
+4.  **Consumo:** O Power BI se conectaria aos dados do S3 via **Amazon Athena** (SQL Serverless) para atualização dinâmica dos dashboards.
+
+---
